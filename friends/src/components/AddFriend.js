@@ -35,6 +35,11 @@ function AddFriend(props){
         setfriendInfo(intitialInfo);
     }
 
+    const goToFriendsList = (event) => {
+        event.preventDefault();
+        window.location.href = '/friends';
+    }
+
     return (
         <div>
             <form onSubmit = {onSubmit}>
@@ -60,7 +65,7 @@ function AddFriend(props){
                     onChange = {handleChange}
                 />
              
-                <button>Add Friend</button>
+                <button onClick = {goToFriendsList}>Add Friend</button>
             </form>
         </div>
     )
